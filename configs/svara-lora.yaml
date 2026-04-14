@@ -1,0 +1,20 @@
+base_model: models/svara-tts-v1
+output_dir: runs/svara-lora
+train_csv: data/transcripts_train.csv
+dev_csv: data/transcripts_dev.csv
+sample_rate: 24000
+batch_size: 16
+grad_accum: 2
+lr: 2e-4
+epochs: 5
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+freeze_vocoder: true
+max_text_len: 220
+seed: 42
+mixed_precision: fp16
+log_every_steps: 50
+save_every_epochs: 1
+phonemize: true
+lexicon_path: data/lexicon.txt   # optional; word<TAB>IPA
