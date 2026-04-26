@@ -1,0 +1,8 @@
+.DS_Store
+
+# Local model weights and generated audio assets
+models/
+data/raw/
+data/source_media/
+data/text/
+data/wav24/

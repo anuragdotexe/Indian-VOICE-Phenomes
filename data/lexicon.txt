@@ -1,0 +1,3 @@
+# word<TAB>IPA_or_phone_sequence
+# Example:
+# Nagesh	n a: g e sh

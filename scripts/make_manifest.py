@@ -39,15 +39,16 @@ def main():
     args = ap.parse_args()
 
     root = Path(args.root).expanduser().resolve()
-    out = Path(args.out).expanduser()
+    out = Path(args.out).expanduser().resolve()
     out.mkdir(parents=True, exist_ok=True)
 
     exts = {e.lower().lstrip(".") for e in args.ext}
     rows = []
     for p in iter_audio(root, exts):
         rel = p.relative_to(root)
+        manifest_path = Path(args.root) / rel
         speaker = args.speaker or p.parent.name
-        rows.append({"path": str(rel), "text": "", "speaker": speaker})
+        rows.append({"path": str(manifest_path), "text": "", "speaker": speaker})
 
     if not rows:
         raise SystemExit(f"No audio found under {root} with extensions {sorted(exts)}")
