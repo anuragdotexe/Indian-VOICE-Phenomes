@@ -152,3 +152,6 @@ Until that is done, this repo should be treated as:
 
 - a prepared local dataset and preprocessing workspace
 - not yet a complete end-to-end fine-tuning pipeline
+
+
+work in progress
