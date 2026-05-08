@@ -1,4 +1,3 @@
-#
 # Indian-VOICE-Phenomes
 
 Self-hosted Indic voice adaptation workspace for building an Indian-accent TTS pipeline without SaaS APIs.
